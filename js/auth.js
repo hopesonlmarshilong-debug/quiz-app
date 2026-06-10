@@ -36,7 +36,7 @@ if (registerForm) {
 
         alert("Registration successful!");
 
-        window.location.href = "index.html";
+        window.location.href = "dashboard.html";
     });
 
 }
@@ -75,8 +75,7 @@ if (loginForm) {
 
         alert("Login successful!");
 
-        window.location.href = "quiz.html";
-
+        window.location.href = "dashboard.html";
     });
 
 }

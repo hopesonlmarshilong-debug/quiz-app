@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚔️ Quiz Battle Arena</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="quiz-container">
+
+        <div class="quiz-header">
+
+            <h2>
+                Welcome,
+                <span id="username"></span>
+            </h2>
+
+            <button id="logoutBtn">
+                Logout
+            </button>
+
+        </div>
+
+        <h1 class="home-title">
+            ⚔️ Quiz Battle Arena
+        </h1>
+
+        <p class="home-description">
+            Choose what you want to do.
+        </p>
+
+        <div class="home-buttons">
+
+            <button onclick="window.location.href='quiz.html'">
+                🎮 Start Game
+            </button>
+
+            <button onclick="window.location.href='leaderboard.html'">
+                🏆 View Leaderboard
+            </button>
+
+        </div>
+
+    </div>
+
+    <script>
+        const currentUser = JSON.parse(
+            localStorage.getItem("currentUser")
+        );
+
+        if (!currentUser) {
+            window.location.href = "index.html";
+        }
+
+        document.getElementById("username").textContent =
+            currentUser.name;
+
+        document
+            .getElementById("logoutBtn")
+            .addEventListener("click", () => {
+
+                localStorage.removeItem("currentUser");
+
+                window.location.href = "index.html";
+            });
+    </script>
+
+</body>
+</html>

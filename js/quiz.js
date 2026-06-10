@@ -228,69 +228,6 @@ function startTimer() {
     }, 1000);
 }
 
-// Results
-function showResults() {
-
-    clearInterval(timerInterval);
-
-    // Save score to leaderboard
-    let leaderboard =
-        JSON.parse(localStorage.getItem("leaderboard")) || [];
-
-    leaderboard.push({
-        name: currentUser ? currentUser.name : "Player",
-        score: score
-    });
-
-    leaderboard.sort((a, b) => b.score - a.score);
-
-    localStorage.setItem(
-        "leaderboard",
-        JSON.stringify(leaderboard)
-    );
-
-    const percentage = Math.round(
-        (score / quizData.length) * 100
-    );
-
-    document.querySelector(".quiz-container").innerHTML = `
-        <div style="text-align:center;">
-
-            <h1>🏆 Quiz Completed!</h1>
-
-            <h2>Score: ${score}/${quizData.length}</h2>
-
-            <h3>Percentage: ${percentage}%</h3>
-
-            <br>
-
-            <button onclick="
-                window.location.href='leaderboard.html'
-            ">
-                View Leaderboard
-            </button>
-
-            <br><br>
-
-            <button onclick="
-                location.reload()
-            ">
-                Play Again
-            </button>
-
-            <br><br>
-
-            <button onclick="
-                localStorage.removeItem('currentUser');
-                window.location.href='index.html';
-            ">
-                Logout
-            </button>
-
-        </div>
-    `;
-}
-
 // Load Question
 function loadQuestion() {
 
@@ -333,6 +270,70 @@ function loadQuestion() {
     });
 
     startTimer();
+}
+
+// Results
+function showResults() {
+
+    clearInterval(timerInterval);
+
+    let leaderboard =
+        JSON.parse(localStorage.getItem("leaderboard")) || [];
+
+    leaderboard.push({
+        name: currentUser ? currentUser.name : "Player",
+        score: score
+    });
+
+    leaderboard.sort((a, b) => b.score - a.score);
+
+    localStorage.setItem(
+        "leaderboard",
+        JSON.stringify(leaderboard)
+    );
+
+    const percentage = Math.round(
+        (score / quizData.length) * 100
+    );
+
+    document.querySelector(".quiz-container").innerHTML = `
+        <div style="text-align:center;">
+
+            <h1>🏆 Quiz Completed!</h1>
+
+            <h2>Score: ${score}/${quizData.length}</h2>
+
+            <h3>Percentage: ${percentage}%</h3>
+
+            <br>
+
+            <button onclick="window.location.href='dashboard.html'">
+                🏠 Back to Dashboard
+            </button>
+
+            <br><br>
+
+            <button onclick="window.location.href='leaderboard.html'">
+                🏆 View Leaderboard
+            </button>
+
+            <br><br>
+
+            <button onclick="location.reload()">
+                🔄 Play Again
+            </button>
+
+            <br><br>
+
+            <button onclick="
+                localStorage.removeItem('currentUser');
+                window.location.href='index.html';
+            ">
+                🚪 Logout
+            </button>
+
+        </div>
+    `;
 }
 
 // Next Question
