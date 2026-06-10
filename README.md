@@ -2,45 +2,49 @@
 
 ## Project Overview
 
-QuizRank is a frontend web application developed as part of a Frontend Development Internship Project.
+QuizRank is a responsive frontend web application developed using HTML, CSS, and JavaScript.
 
-The application allows users to register, log in, take a timed quiz, view their results, and compare scores on a leaderboard. The project is fully responsive and works on both desktop and mobile devices.
+The application allows users to register, log in, take a timed quiz, view their results, and compare scores on a leaderboard. The system uses Local Storage to manage user information and quiz scores.
 
 ---
 
 ## Features
 
 ### User Authentication
-- User Registration
-- User Login
-- Logout Functionality
-- User data stored using Local Storage
+
+* User Registration
+* User Login
+* Logout Functionality
+* Local Storage User Management
 
 ### Quiz System
-- Multiple-choice questions
-- Question navigation
-- Timer for each question
-- Automatic score calculation
-- Quiz completion page
+
+* Multiple Choice Questions
+* Question Navigation
+* Timer Functionality
+* Automatic Score Calculation
+* Results Display
 
 ### Leaderboard
-- Displays player rankings
-- Stores scores using Local Storage
-- Sorts users by highest score
+
+* Stores User Scores
+* Displays Rankings
+* Sorts Scores from Highest to Lowest
 
 ### Responsive Design
-- Desktop friendly
-- Mobile responsive layout
-- Modern UI design
+
+* Desktop Friendly
+* Mobile Friendly
+* Modern Game-Style Interface
 
 ---
 
 ## Technologies Used
 
-- HTML5
-- CSS3
-- JavaScript (ES6)
-- Local Storage
+* HTML5
+* CSS3
+* JavaScript (ES6)
+* Local Storage
 
 ---
 
@@ -69,6 +73,7 @@ quiz-app/
 │   └── final-output.png
 │
 ├── index.html
+├── login.html
 ├── register.html
 ├── dashboard.html
 ├── quiz.html
@@ -81,13 +86,7 @@ quiz-app/
 
 ## Application Workflow
 
-1. User Registration
-2. User Login
-3. Dashboard Page
-4. Start Quiz
-5. Answer Questions
-6. View Results
-7. View Leaderboard
+Home Page → Login/Register → Dashboard → Quiz → Results → Leaderboard
 
 ---
 
@@ -95,40 +94,36 @@ quiz-app/
 
 The screenshots folder contains:
 
-- Login Page
-- Registration Page
-- Quiz Interface
-- Timer Functionality
-- Results Page
-- Leaderboard Page
-- Mobile Responsive View
-- Final Application Output
+* Login Page
+* Registration Page
+* Quiz Interface
+* Timer Functionality
+* Results Page
+* Leaderboard Page
+* Mobile Responsive View
+* Final Application Output
 
 ---
 
 ## How to Run the Project
 
-### Method 1: Open Locally
-
 1. Download or clone the repository.
 2. Open the project folder.
 3. Open `index.html` in a web browser.
-4. Register a new account.
-5. Login and start the quiz.
-
-### Method 2: GitHub Pages
-
-Open the deployed project using the GitHub Pages link.
+4. Click Login or Register.
+5. Login to access the Dashboard.
+6. Start the Quiz.
+7. View Results and Leaderboard.
 
 ---
 
 ## Future Improvements
 
-- Admin Panel
-- Database Integration
-- Question Categories
-- User Profiles
-- Dark Mode
+* Database Integration
+* Admin Panel
+* Question Categories
+* User Profiles
+* Dark Mode
 
 ---
 
@@ -136,8 +131,6 @@ Open the deployed project using the GitHub Pages link.
 
 Frontend Development Internship Project
 
-Developed by: Hopeson
+Developed by: Hopeson Lyngdoh Marshillong
 
-Year: 2025
-
----
+Year: 2026

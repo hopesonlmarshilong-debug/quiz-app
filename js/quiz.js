@@ -15,7 +15,7 @@ document
 
         localStorage.removeItem("currentUser");
 
-        window.location.href = "index.html";
+        window.location.href = "login.html";
     });
 
 // Quiz Questions
@@ -327,7 +327,7 @@ function showResults() {
 
             <button onclick="
                 localStorage.removeItem('currentUser');
-                window.location.href='index.html';
+                 window.location.href='login.html';
             ">
                 🚪 Logout
             </button>
