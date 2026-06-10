@@ -3,11 +3,15 @@ const currentUser = JSON.parse(
     localStorage.getItem("currentUser")
 );
 
-if (currentUser) {
+if (!currentUser) {
+
+    window.location.href = "login.html";
+
+} else {
+
     document.getElementById("username").textContent =
         currentUser.name;
 }
-
 // Logout
 document
     .getElementById("logoutBtn")
